@@ -2,15 +2,15 @@ name := "ForecastMicroservice"
 
 version := "forecastservice"
 
-libraryDependencies ++= Seq(
+libraryDependencies ++= Seq( 
   "org.slf4j" % "slf4j-nop" % "1.6.4"
 )     
 
 play.Project.playScalaSettings
 
-coverageEnabled := true
+coverageEnabled.in(Test,test) := true
 
-//.in(Test,test)
+//
 // For Logging
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 
