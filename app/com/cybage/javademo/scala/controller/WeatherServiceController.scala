@@ -41,10 +41,10 @@ object WeatherServiceController extends Controller {
         //total processing time 
         val totalRequestProcessingTime = ((Calendar.getInstance().getTime().getTime) - requestTime)
         Logger.info("Response =>" + response.json+ "totalRequestProcessingTime" + totalRequestProcessingTime + "ms")
-        resp.map { response => Ok((response.json)) }
+        resp.map { response => Ok((response.json)).withHeaders(ACCESS_CONTROL_ALLOW_ORIGIN -> "*")}
       } else {
         Logger.info("Response =>" + response.body.toString())
-        resp.map { response => Ok(response.statusText) }
+        resp.map { response => Ok(response.statusText).withHeaders(ACCESS_CONTROL_ALLOW_ORIGIN -> "*")}
       }
 
   }

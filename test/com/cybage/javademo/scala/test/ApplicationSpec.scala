@@ -14,15 +14,15 @@ import play.api.test.Helpers._
 @RunWith(classOf[JUnitRunner])
 class ApplicationSpec extends Specification {
 
-  "forecat service for pincode" in new WithApplication {
-    val forecast = route(FakeRequest(GET, "/forecastweather/271001")).get
+  /*"forecat service for pincode" in new WithApplication {
+    val forecast = route(FakeRequest(GET, "/forecast/271001")).get
 
     status(forecast) must equalTo(OK)
     contentType(forecast) must beSome.which(_ == "application/json")
     contentAsString(forecast) must contain("Gonda")
-  }
+  }*/
   "forecast service for city name" in new WithApplication {
-    val forecasta = route(FakeRequest(GET, "/forecastweather/pune")).get
+    val forecasta = route(FakeRequest(GET, "/forecast/pune")).get
 
     status(forecasta) must equalTo(OK)
     contentType(forecasta) must beSome.which(_ == "application/json")
