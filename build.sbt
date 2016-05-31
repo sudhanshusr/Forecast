@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
 
 play.Project.playScalaSettings
 
-coverageEnabled := true
+coverageEnabled.in(Test, test) := true
 
 //
 // For Logging
