@@ -3,7 +3,7 @@ name := "ForecastMicroservice"
 version := "forecastservice"
 
 libraryDependencies ++= Seq(
-  "org.scoverage" %% "scalac-scoverage-runtime" % "1.0.4",
+  "org.scoverage" % "scalac-scoverage-runtime_2.11" % "1.1.0",
   "org.slf4j" % "slf4j-nop" % "1.6.4"
 )     
 
