@@ -9,11 +9,14 @@ libraryDependencies ++= Seq(
 
 play.Project.playScalaSettings
 
-coverageEnabled.in(Test, test) := true
+//coverageEnabled.in(Test, test) := true
+coverageEnabled := true
 
 //
 // For Logging
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
+
+test in assembly := {}
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
   {
