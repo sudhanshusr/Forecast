@@ -1,0 +1,5 @@
+demo:
+  build:
+    image: demo
+    dockerfile_path: Dockerfile
+    ports: "9000:9000"
