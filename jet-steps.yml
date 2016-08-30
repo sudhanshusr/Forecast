@@ -1,0 +1,9 @@
+type: parallel
+  name: testing
+  steps:
+    - type: serial
+      name: prepare_site
+      steps:
+        - name: forecast
+          service: demo
+          command: bash echo hello
